@@ -1,5 +1,5 @@
 // ReverseNumber.java
-public class ReverseNumber {
+public class Revnum {
     public static void main(String[] args) {
         int number = 12345;
         int reverse = 0;
