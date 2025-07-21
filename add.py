@@ -1,4 +1,5 @@
-# calculator.py
+# add.py
+import sys
 
 def add(a, b):
     return a + b
@@ -10,13 +11,15 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if b == 0:
-        return "Cannot divide by zero"
-    return a / b
+    return a / b if b != 0 else "Cannot divide by zero"
 
 if __name__ == "__main__":
-    a = float(input("Enter first number: "))
-    b = float(input("Enter second number: "))
+    if len(sys.argv) != 3:
+        print("Usage: python add.py <num1> <num2>")
+        sys.exit(1)
+
+    a = float(sys.argv[1])
+    b = float(sys.argv[2])
 
     print(f"Addition: {add(a, b)}")
     print(f"Subtraction: {sub(a, b)}")
